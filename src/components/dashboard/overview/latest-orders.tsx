@@ -16,16 +16,16 @@ import { ArrowRight as ArrowRightIcon } from '@phosphor-icons/react/dist/ssr/Arr
 import dayjs from 'dayjs';
 
 const statusMap = {
-  pending: { label: 'Pending', color: 'warning' },
-  delivered: { label: 'Delivered', color: 'success' },
-  refunded: { label: 'Refunded', color: 'error' },
+  주의: { label: '주의', color: 'warning' },
+  관심: { label: '관심', color: 'success' },
+  심각: { label: '심각', color: 'error' },
 } as const;
 
 export interface Order {
   id: string;
   customer: { name: string };
   amount: number;
-  status: 'pending' | 'delivered' | 'refunded';
+  status: '주의' | '관심' | '심각';
   createdAt: Date;
 }
 
@@ -37,14 +37,14 @@ export interface LatestOrdersProps {
 export function LatestOrders({ orders = [], sx }: LatestOrdersProps): React.JSX.Element {
   return (
     <Card sx={sx}>
-      <CardHeader title="Latest orders" />
+      <CardHeader title="Latest logs" />
       <Divider />
       <Box sx={{ overflowX: 'auto' }}>
         <Table sx={{ minWidth: 800 }}>
           <TableHead>
             <TableRow>
-              <TableCell>Order</TableCell>
-              <TableCell>Customer</TableCell>
+              <TableCell>Severity</TableCell>
+              <TableCell>Type</TableCell>
               <TableCell sortDirection="desc">Date</TableCell>
               <TableCell>Status</TableCell>
             </TableRow>

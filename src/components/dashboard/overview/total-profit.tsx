@@ -19,7 +19,7 @@ export function TotalProfit({ value, sx }: TotalProfitProps): React.JSX.Element 
         <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'space-between' }} spacing={3}>
           <Stack spacing={1}>
             <Typography color="text.secondary" variant="overline">
-              악성 IP
+              악성 의심 IP 개수
             </Typography>
             <Typography variant="h4">{value}</Typography>
           </Stack>
