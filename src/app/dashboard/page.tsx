@@ -24,7 +24,7 @@ export default function Page(): React.JSX.Element {
         <TotalCustomers diff={16} trend="down" sx={{ height: '100%' }} value="16" />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
-        <TasksProgress sx={{ height: '100%' }} value={75.5} />
+        <TasksProgress sx={{ height: '100%' }} value={100} />
       </Grid>
       <Grid lg={3} sm={6} xs={12}>
         <TotalProfit sx={{ height: '100%' }} value="15" />
