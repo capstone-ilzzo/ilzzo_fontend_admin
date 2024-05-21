@@ -1,0 +1,10 @@
+/* Link.css */
+.link {
+  color: #000; /* 기본 색상 */
+  text-decoration: none; /* 밑줄 제거 */
+}
+
+.link:hover {
+  color: #007bff; /* 마우스 오버 시 색상 */
+  text-decoration: underline; /* 마우스 오버 시 밑줄 추가 */
+}
