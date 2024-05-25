@@ -72,7 +72,7 @@ function useChartOptions(): ApexOptions {
     },
     yaxis: {
       labels: {
-        formatter: (value) => (value > 0 ? `${value}` : `${value}`),
+        formatter: (value) => (value > 0 ? value.toString() : value.toString()),
         offsetX: -10,
         style: { colors: theme.palette.text.secondary },
       },
